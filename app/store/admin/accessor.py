@@ -15,7 +15,11 @@ class AdminAccessor(BaseAccessor):
         raise NotImplementedError
 
     async def get_by_email(self, email: str) -> Optional[Admin]:
-        raise NotImplementedError
+        admins = self.app.database.admins
+        for admin in admins:
+            if admin.email == email:
+                return admin
+        return None
 
     async def create_admin(self, email: str, password: str) -> Admin:
         raise NotImplementedError
