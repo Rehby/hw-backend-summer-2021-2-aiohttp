@@ -21,5 +21,5 @@ class Question:
     id: Optional[int]
     title:str
     theme_id:int
-    answers: list[Answer]
+    answers: [Answer]
    
