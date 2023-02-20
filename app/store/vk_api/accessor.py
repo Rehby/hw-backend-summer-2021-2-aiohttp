@@ -48,9 +48,9 @@ class VkApiAccessor(BaseAccessor):
         url = self._build_query(
             host='https://api.vk.com/method/',
             method='groups.getLongPollServer',
-            params={'group_id': '206725431',
+            params={'group_id': '218949683',
                     'access_token':
-                        'a9e5176da9e5176da9e5176d3daaf7a94daa9e5a9e5176dca17e31e4e82b0b8d3be856b'})
+                        'vk1.a.WzNXoOtvEg5IjCjg4vIiPTlziBdd4RlY_9nBHalzb6f5Wp_Mo3J0Tu57zgL8ae-UCG8q0VnwY0Lilng3UfemEy1DbIiL1dbgs7e7GRRE6ZfY0dl9VZQhPoaoE5k4srxXbFv1-jm9sC7QQNUtX3MNanL288iqiq-y6kzyo2vrKJeUAVJ7rTTFOTg8xqbJGsryrFssXS-QAcLaF75XORCW2w'})
 
         async with self.session.get(url) as resp:
             json_data = await resp.json()
@@ -85,7 +85,7 @@ class VkApiAccessor(BaseAccessor):
                     'message': message.text,
                     'random_id': randint(0, 32000),
                     'access_token':
-                        'a9e5176da9e5176da9e5176d3daaf7a94daa9e5a9e5176dca17e31e4e82b0b8d3be856b'})
+                        'vk1.a.WzNXoOtvEg5IjCjg4vIiPTlziBdd4RlY_9nBHalzb6f5Wp_Mo3J0Tu57zgL8ae-UCG8q0VnwY0Lilng3UfemEy1DbIiL1dbgs7e7GRRE6ZfY0dl9VZQhPoaoE5k4srxXbFv1-jm9sC7QQNUtX3MNanL288iqiq-y6kzyo2vrKJeUAVJ7rTTFOTg8xqbJGsryrFssXS-QAcLaF75XORCW2w'})
 
         if self.session is not None:
             async with self.session.get(url) as resp:
